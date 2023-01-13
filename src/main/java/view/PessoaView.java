@@ -1,7 +1,8 @@
 package view;
 
-import controller.PessoaController;
+import controller.impl.PessoaController;
 import model.Pessoa;
+import org.jetbrains.annotations.NotNull;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -49,8 +50,7 @@ public class PessoaView {
         controller.cadastrar(pessoa);
     }
 
-    public void update(UUID id){
-        Pessoa pessoa = controller.ler(id);
+    public void atualizar(Pessoa pessoa){
         exibirPessoa(pessoa);
 
         System.out.println("Informe o novo nome:");
@@ -67,14 +67,31 @@ public class PessoaView {
         String cpf = scanner.nextLine();
         pessoa.setCpf(cpf);
 
-        controller.update(id, pessoa);
+        controller.update(pessoa.getId(), pessoa);
     }
 
-    public void delete(UUID id){
+    public void apagar(UUID id){
 
         Pessoa pessoa = controller.delete(id);
         System.out.println("Pessoa apagada foi:");
         exibirPessoa(pessoa);
+
+    }
+
+    public void apagar(){
+        listar();
+        System.out.println("Inform o npumero do cliente que deseja apagar:");
+        Integer numero = scanner.nextInt();
+        Pessoa pessoa = controller.listar().get(numero - 1);
+        apagar(pessoa.getId());
+    }
+
+    public void atualizar(){
+        listar();
+        System.out.println("Informe o número do cliente que deseja atualizar:");
+        Integer numeroCliente = scanner.nextInt();
+        Pessoa pessoa = controller.listar().get(numeroCliente -1);
+        atualizar(pessoa);
 
     }
 
@@ -85,4 +102,34 @@ public class PessoaView {
             exibirPessoa(pessoas.get(index));
         }
     }
+
+    public void exibirOpcoes(){
+        System.out.println("norme a opção desejada:");
+        System.out.println("1 - Cadastrar");
+        System.out.println("2 - Listar");
+        System.out.println("3 - Atualizar");
+        System.out.println("4 - Apagar");
+        System.out.println("0 - Sair");
+        Integer opcao = scanner.nextInt();
+        switch (opcao){
+            case 1:
+                cadastrar();
+                break;
+            case 2:
+                listar();
+                break;
+            case 3:
+                atualizar();
+                break;
+            case 4:
+                apagar();
+                break;
+            case 5:
+                System.exit(0);
+                break;
+            default:
+                System.out.println("Opção invalida");
+        }
+    }
+
 }
