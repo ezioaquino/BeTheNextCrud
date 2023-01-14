@@ -1,32 +1,28 @@
 package controller.impl;
 
+import controller.impl.exception.PessoaNaoEncontrada;
 import model.Pessoa;
 
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 public class PessoaArmazenamentoVolatilController implements PessoaController {
 
-    private List<Pessoa> pessoas = new ArrayList<>();
-    private PessoaController controller;
     private Scanner scanner = new Scanner(System.in);
+    private Map<UUID, Pessoa> pessoas = new HashMap<>();
 
     @Override
     public void cadastrar(Pessoa pessoa) {
         pessoa.setId(UUID.randomUUID());
 
-        pessoas.add(pessoa);
+        pessoas.put(pessoa.getId(), pessoa);
     }
 
     @Override
     public Pessoa ler(UUID id) {
 
-        Pessoa encontrada = null;
-        for (Pessoa pessoa: pessoas){
-            if(pessoa.getId().equals(id)){
-                encontrada = pessoa;
-            }
+        Pessoa encontrada = pessoas.get(id);
+        if (encontrada == null){
+            throw new PessoaNaoEncontrada();
         }
         return encontrada;
     }
@@ -34,32 +30,24 @@ public class PessoaArmazenamentoVolatilController implements PessoaController {
     @Override
     public List<Pessoa> listar() {
 
-        return pessoas;
+        return new ArrayList<>(pessoas.values());
     }
 
     @Override
     public void update(UUID id, Pessoa pessoa) {
-
-        for (int index = 0; index < pessoas.size(); index++) {
-            Pessoa antiga = pessoas.get(index);
-            if (antiga.getId().equals(id)){
-                pessoas.set(index, pessoa);
-            }
+        if (pessoas.containsKey(id)) {
+            pessoas.put(id, pessoa);
+        } else {
+            throw new PessoaNaoEncontrada();
         }
-
     }
 
     @Override
     public Pessoa delete(UUID id) {
 
-        Iterator<Pessoa> iterator = pessoas.iterator();
-        Pessoa apagada = null;
-        while (iterator.hasNext()){
-            Pessoa pessoa = iterator.next();
-            if (pessoa.getId().equals(id)){
-                apagada = pessoa;
-                iterator.remove();
-            }
+        Pessoa apagada = pessoas.remove(id);
+        if (apagada == null) {
+            throw new PessoaNaoEncontrada();
         }
         return apagada;
     }

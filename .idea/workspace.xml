@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f08e27e-451a-45d9-9a3c-cf589b354bf7" name="Changes" comment="Implementado completamente o Crud e o mcv, como primeiro contato">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/impl/PessoaArmazenamentoVolatilController.java" afterDir="false" />
+    <list default="true" id="1f08e27e-451a-45d9-9a3c-cf589b354bf7" name="Changes" comment="Implementado completamente o Crud e o mvc, agora implementado a classe própriamente dito">
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/impl/PessoaControllerFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/impl/exception/PessoaNaoEncontrada.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/PessoaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/impl/PessoaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ada/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ada/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/impl/PessoaArmazenamentoVolatilController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/impl/PessoaArmazenamentoVolatilController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/PessoaView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/PessoaView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +60,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673485112078</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Implementado completamente o Crud e o mvc, agora implementado a classe própriamente dito">
+      <created>1673651412124</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1673651412124</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -76,6 +83,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Implementado completamente o Crud e o mcv, como primeiro contato" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implementado completamente o Crud e o mcv, como primeiro contato" />
+    <MESSAGE value="Implementado completamente o Crud e o mvc, agora implementado a classe própriamente dito" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementado completamente o Crud e o mvc, agora implementado a classe própriamente dito" />
   </component>
 </project>
