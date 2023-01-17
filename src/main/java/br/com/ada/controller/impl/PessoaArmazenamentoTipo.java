@@ -1,4 +1,4 @@
-package controller.impl;
+package br.com.ada.controller.impl;
 
 public enum PessoaArmazenamentoTipo {
 

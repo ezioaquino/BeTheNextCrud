@@ -1,7 +1,7 @@
-package controller.impl;
+package br.com.ada.controller.impl;
 
-import controller.impl.exception.PessoaNaoEncontrada;
-import model.Pessoa;
+import br.com.ada.controller.impl.exception.PessoaNaoEncontrada;
+import br.com.ada.model.pessoa.Pessoa;
 
 import java.util.*;
 

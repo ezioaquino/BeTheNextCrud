@@ -1,9 +1,8 @@
-package view;
+package br.com.ada.view;
 
-import controller.impl.PessoaArmazenamentoVolatilController;
-import controller.impl.PessoaController;
-import controller.impl.exception.PessoaNaoEncontrada;
-import model.Pessoa;
+import br.com.ada.controller.impl.PessoaController;
+import br.com.ada.controller.impl.exception.PessoaNaoEncontrada;
+import br.com.ada.model.pessoa.Pessoa;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -138,6 +137,7 @@ public class PessoaView {
         System.out.println("4 - Apagar");
         System.out.println("0 - Sair");
         Integer opcao = scanner.nextInt();
+        scanner.nextLine();
         switch (opcao){
             case 1:
                 cadastrar();
@@ -151,12 +151,13 @@ public class PessoaView {
             case 4:
                 apagar();
                 break;
-            case 5:
+            case 0:
                 System.exit(0);
                 break;
             default:
                 System.out.println("Opção invalida");
         }
+        exibirOpcoes();
     }
 
 }

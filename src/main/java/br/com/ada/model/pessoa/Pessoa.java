@@ -1,4 +1,4 @@
-package model;
+package br.com.ada.model.pessoa;
 
 import java.time.LocalDate;
 import java.util.UUID;
@@ -31,6 +31,7 @@ public class Pessoa {
     }
 
     public void setDataNascimento(LocalDate dataNascimento) {
+
         this.DataNascimento = dataNascimento;
     }
 

@@ -1,7 +1,7 @@
-package controller.impl;
+package br.com.ada.controller.impl;
 
 
-import model.Pessoa;
+import br.com.ada.model.pessoa.Pessoa;
 
 import java.util.List;
 import java.util.UUID;
