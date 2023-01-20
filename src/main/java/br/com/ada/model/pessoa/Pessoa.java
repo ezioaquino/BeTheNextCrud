@@ -1,9 +1,12 @@
 package br.com.ada.model.pessoa;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.UUID;
 
-public class Pessoa {
+public class Pessoa implements Serializable {
+
+    public static final long serialVersionUID = 1l;
 
     private UUID Id;
     private String Nome;

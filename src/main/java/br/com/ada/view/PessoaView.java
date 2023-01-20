@@ -112,7 +112,7 @@ public class PessoaView {
         System.out.println("| Número | Nome        | Data nasc.       | CPF      |");
 
         for (int index=0; index <pessoas.size(); index++ ){
-            System.out.println((index +1) + " - ");
+            System.out.print("  " + (index +1) + " -    ");
             exibirPessoa(pessoas.get(index));
         }
     }

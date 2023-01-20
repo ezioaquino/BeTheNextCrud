@@ -1,5 +1,6 @@
 package br.com.ada.controller.impl;
 
+import br.com.ada.controller.impl.exception.PessoaNaoEncontrada;
 import br.com.ada.model.pessoa.Pessoa;
 import br.com.ada.model.pessoa.dao.PessoaDAO;
 
@@ -19,25 +20,32 @@ public class PessoaArmazenamentoDefinitivoController implements PessoaController
     @Override
     public void cadastrar(Pessoa pessoa) {
 
+        pessoa.setId(UUID.randomUUID());
+        pessoaDAO.cadastrar(pessoa);
+
     }
 
     @Override
     public Pessoa ler(UUID id) {
-        return null;
+
+        return pessoaDAO.buscar(id);
     }
 
     @Override
     public List<Pessoa> listar() {
-        return null;
+
+        return pessoaDAO.listar();
     }
 
     @Override
     public void update(UUID id, Pessoa pessoa) {
+        pessoaDAO.atualizar(id, pessoa);
 
     }
 
     @Override
     public Pessoa delete(UUID id) {
-        return null;
+
+        return pessoaDAO.apagar(id);
     }
 }

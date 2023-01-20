@@ -2,10 +2,12 @@ package br.com.ada.model.pessoa.dao;
 
 import br.com.ada.model.pessoa.Pessoa;
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.UUID;
 
 public interface PessoaDAO {
+
 
     void cadastrar(Pessoa pessoa);
 

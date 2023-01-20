@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<pessoa>
+    <id>d62e906c-0cc6-4293-9ac1-a6ad12380751</id>
+    <nome>Marco</nome>
+    <data_nascimento>2007-02-24</data_nascimento>
+    <cpf>123123123</cpf>
+</pessoa>

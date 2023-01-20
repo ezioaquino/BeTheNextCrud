@@ -1,6 +1,7 @@
 package br.com.ada.controller.impl;
 
 import br.com.ada.model.pessoa.dao.impl.PessoaBinaryDAO;
+import br.com.ada.model.pessoa.dao.impl.PessoaXMLDAO;
 
 public class PessoaControllerFactory {
 
@@ -9,7 +10,7 @@ public class PessoaControllerFactory {
             return new PessoaArmazenamentoVolatilController();
         } else if (tipo == PessoaArmazenamentoTipo.DEFINITIVO) {
             return new PessoaArmazenamentoDefinitivoController(
-                    new PessoaBinaryDAO()
+                    new PessoaXMLDAO()
             );
         } else {
             throw new RuntimeException("Nenhuma implementação disponível");

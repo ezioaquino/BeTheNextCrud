@@ -5,19 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f08e27e-451a-45d9-9a3c-cf589b354bf7" name="Changes" comment="Implementado completamente o Crud e o mvc, agora implementado a classe própriamente dito, agora usando tambem o factory">
-      <change afterPath="$PROJECT_DIR$/crud.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/ada/controller/impl/PessoaArmazenamentoDefinitivoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/ada/model/pessoa/dao/PessoaDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/ada/model/pessoa/dao/impl/PessoaBinaryDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/xml/pessoas/b9dc7394-9e42-4762-8d19-7a5373c8c458.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/xml/pessoas/d62e906c-0cc6-4293-9ac1-a6ad12380751.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/ada/controller/impl/exception/DAOException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/ada/model/pessoa/dao/impl/PessoaXMLDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ada/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ada/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/impl/PessoaArmazenamentoTipo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ada/controller/impl/PessoaArmazenamentoTipo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/impl/PessoaArmazenamentoVolatilController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ada/controller/impl/PessoaArmazenamentoVolatilController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/impl/PessoaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ada/controller/impl/PessoaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/impl/PessoaControllerFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ada/controller/impl/PessoaControllerFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/impl/exception/PessoaNaoEncontrada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ada/controller/impl/exception/PessoaNaoEncontrada.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Pessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ada/model/pessoa/Pessoa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/PessoaView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ada/view/PessoaView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ada/controller/impl/PessoaArmazenamentoDefinitivoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ada/controller/impl/PessoaArmazenamentoDefinitivoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ada/controller/impl/PessoaControllerFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ada/controller/impl/PessoaControllerFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ada/model/pessoa/Pessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ada/model/pessoa/Pessoa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ada/model/pessoa/dao/PessoaDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ada/model/pessoa/dao/PessoaDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ada/model/pessoa/dao/impl/PessoaBinaryDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ada/model/pessoa/dao/impl/PessoaBinaryDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ada/view/PessoaView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ada/view/PessoaView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,24 +38,27 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2KCdFezZcaXPVIvaks8cLNT6XGT" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\bruxa\IdeaProjects\BeTheNextCrud" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.com.ada.Main" />
       <module name="BeTheNextCrud" />
@@ -116,8 +117,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main (4)" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main (4)" />
         <item itemvalue="Application.Main (3)" />
         <item itemvalue="Application.Main (2)" />
       </list>
@@ -168,6 +169,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Implementado completamente o Crud e o mcv, como primeiro contato" />
     <MESSAGE value="Implementado completamente o Crud e o mvc, agora implementado a classe própriamente dito" />
     <MESSAGE value="Implementado completamente o Crud e o mvc, agora implementado a classe própriamente dito, agora usando tambem o factory" />
